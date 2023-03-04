@@ -1,0 +1,18 @@
+{
+  "homePage": {
+    "homeNavButton": "Головна",
+    "newsNavButton": "Новини",
+    "loginNavButton": "Війти",
+    "profileNavButton": "Профіль"
+  },
+  "newsPage": {
+    "paginateButton": "Завантажити ще"
+  },
+  "loginPage": {
+    "titleForm": "Війти",
+    "usernameForm": "Ім'я користувача",
+    "passwordForm": "Пароль",
+    "validationTextForm": "Ім'я користувача або пароль введено неправильно",
+    "submitButtonForm": "Війти"
+  }
+}

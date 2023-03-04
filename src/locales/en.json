@@ -1,0 +1,18 @@
+{
+  "homePage": {
+    "homeNavButton": "Home",
+    "newsNavButton": "News",
+    "loginNavButton": "Login",
+    "profileNavButton": "Profile"
+  },
+  "newsPage": {
+    "paginateButton": "Paginate"
+  },
+  "loginPage": {
+    "titleForm": "Login",
+    "usernameForm": "Username",
+    "passwordForm": "Password",
+    "validationTextForm": "Username or password entered incorrectly",
+    "submitButtonForm": "Sign In"
+  }
+}

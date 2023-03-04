@@ -1,58 +1,61 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import { FC, Suspense } from 'react';
+import { Route, Routes } from 'react-router-dom';
 
-function App() {
+import { useAppSelector } from './redux/hooks';
+import { getIsAuthorized } from './redux/slices/user/selectors';
+import Layout from './layouts/Layout';
+import Home from './pages/Home';
+import News from './pages/News';
+import Login from './pages/Login';
+import PrivateRoute from './components/PrivateRoute';
+import Profile from './pages/Profile';
+import NotFound from './pages/NotFound';
+import { ROUTES } from './constants';
+
+const App: FC = () => {
+  const isAuthorized = useAppSelector(getIsAuthorized);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
-    </div>
+    <Routes>
+      <Route path={ROUTES.home} element={<Layout />}>
+        <Route path='' element={<Home />} />
+        <Route
+          path={ROUTES.news}
+          element={
+            <Suspense fallback={<p>Loading News page...</p>}>
+              <News />
+            </Suspense>
+          }
+        />
+        <Route
+          path={ROUTES.login}
+          element={
+            <Suspense fallback={<p>Loading Login page...</p>}>
+              <Login />
+            </Suspense>
+          }
+        />
+        <Route
+          path={ROUTES.profile}
+          element={
+            <PrivateRoute isAuthorized={isAuthorized}>
+              <Suspense fallback={<p>Loading Profile page...</p>}>
+                <Profile />
+              </Suspense>
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path='*'
+          element={
+            <Suspense fallback={<p>Loading...</p>}>
+              <NotFound />
+            </Suspense>
+          }
+        />
+      </Route>
+    </Routes>
   );
-}
+};
 
 export default App;
