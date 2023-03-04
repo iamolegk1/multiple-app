@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.js": "/iamolegk1/multiple-app/static/js/main.d7c0bafb.js",
+    "static/media/unitedkingdom.svg": "/iamolegk1/multiple-app/static/media/unitedkingdom.0d3585543a7cbfc37cb9ff6447f56986.svg",
+    "index.html": "/iamolegk1/multiple-app/index.html",
+    "static/media/ukraine.svg": "/iamolegk1/multiple-app/static/media/ukraine.f5edad72799d8b97faeb28370bee43be.svg",
+    "main.d7c0bafb.js.map": "/iamolegk1/multiple-app/static/js/main.d7c0bafb.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.d7c0bafb.js"
+  ]
+}
