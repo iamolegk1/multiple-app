@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "./static/js/main.da69a52e.js",
+    "main.js": "./static/js/main.82b13475.js",
     "static/media/unitedkingdom.svg": "./static/media/unitedkingdom.0d3585543a7cbfc37cb9ff6447f56986.svg",
     "static/media/ukraine.svg": "./static/media/ukraine.f5edad72799d8b97faeb28370bee43be.svg",
     "index.html": "./index.html",
-    "main.da69a52e.js.map": "./static/js/main.da69a52e.js.map"
+    "main.82b13475.js.map": "./static/js/main.82b13475.js.map"
   },
   "entrypoints": [
-    "static/js/main.da69a52e.js"
+    "static/js/main.82b13475.js"
   ]
 }
